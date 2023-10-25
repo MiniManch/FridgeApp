@@ -1,0 +1,88 @@
+.fridge {
+    background-color: rgb(25, 4, 130);
+    width: 20vw;
+    height: 70vh;
+    margin: 2vh auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+}
+
+.fridge_door{
+    background-color: rgb(119, 82, 254);
+    width:15vw;
+    height:70vh;
+    margin-left: 5vw;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+
+.top_door{
+    width:100%;
+    height: 25%;
+}
+
+.bottom_door{
+    width:75%;
+    height:74%;
+
+    overflow: hidden;
+    transform-origin: right;
+    box-shadow: 1px 1px 2px black;
+    position: absolute;
+    background-color: rgb(119, 82, 254);
+    z-index:1;
+    transition: .7s;
+    
+}
+
+.hr{
+    border:0;
+    margin: 0; /* Set margin to zero */
+    padding: 0; /* Set padding to zero */
+    border-top: 5px solid rgb(25, 4, 130);
+    width:100%;
+    z-index: 1;
+}
+
+.fridge_handle {
+   width:4vw;
+   position: relative;
+   top:12vh;
+   left:1vw;
+}
+  
+/* --------------- */
+
+
+ 
+  .bottom_door:before, .bottom_doort:after {
+    content:"";
+    width: 105px;
+    height: 75px;
+    left:22.5px;
+  }
+  
+  .bottom_door:before {
+    top:25px;
+  }
+  
+  .bottom_door:after {
+    top:155px;
+  }
+  
+  
+  .bottom_door.open {
+      transform: rotateY(160deg);
+    }
